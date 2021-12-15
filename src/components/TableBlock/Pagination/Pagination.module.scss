@@ -1,0 +1,26 @@
+@import "../../../global";
+
+.pagination {
+  @include flexJA(center, center);
+  width: 600px;
+  margin: 20px auto;
+  height: 50px;
+  div {
+    cursor: pointer;
+    margin: 0 10px;
+    background: $colorBgTd;
+    padding: 10px 15px;
+    font-weight: 700;
+    color: $colorWhite;
+    &:hover {
+      color: $colorYellow;
+    }
+  }
+  .active {
+    background: $colorYellow;
+    color: $colorGray;
+    &:hover {
+      color: $colorGray;
+    }
+  }
+}

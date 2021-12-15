@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Smooch&display=swap');
+
+$colorYellow: #ffd500;
+$colorWhite: #FFFFFF;
+$colorGray: #494949;
+$colorRed: #ff0000;
+$colorBgTd: rgba(0, 0, 0, 0.85);
+
+@mixin flexJA($j, $a)  {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}
+

@@ -1,0 +1,38 @@
+@import "../../../global";
+
+.sortBar {
+  margin-bottom: 15px;
+  .wrapper {
+    margin-bottom: 15px;
+    height: 60px;
+    @include flexJA(space-between, start);
+    div {
+      width: 48%;
+      height: 40px;
+      select, input, button {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+      }
+      button {
+        background: $colorYellow;
+        border: none;
+        color: $colorGray;
+        font-weight: 700;
+        cursor: pointer;
+        &:disabled {
+          background: rgba(255, 253, 80, 0.38);
+        }
+      }
+      .error {
+        font-size: 14px;
+        height: 20px;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        color: $colorRed;
+      }
+    }
+  }
+}

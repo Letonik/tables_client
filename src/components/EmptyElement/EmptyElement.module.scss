@@ -1,0 +1,12 @@
+@import "../../global";
+
+.emptyElement {
+  background: $colorBgTd;
+  text-align: center;
+  padding: 50px;
+  min-height: 150px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 4px;
+  color: $colorWhite;
+}

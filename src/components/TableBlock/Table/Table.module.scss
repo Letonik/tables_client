@@ -1,0 +1,27 @@
+@import "../../../global";
+
+.table {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  border-spacing: 0 10px;
+  tr {
+    border-radius: 10px;
+  }
+  th {
+    background: $colorYellow;
+    color: $colorGray;
+    padding: 12px 17px;
+    font-weight: 700;
+  }
+  td {
+    color: $colorWhite;
+    background: $colorBgTd;
+    padding: 10px 17px;
+    font-weight: 500;
+  }
+  tr:hover td {
+    color: $colorYellow;
+  }
+}

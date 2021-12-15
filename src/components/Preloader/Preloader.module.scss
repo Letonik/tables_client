@@ -1,0 +1,13 @@
+@import '../../global';
+.preloader {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  @include flexJA(center, start);
+  img {
+    position: fixed;
+    top: 30%;
+  }
+}
