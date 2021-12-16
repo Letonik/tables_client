@@ -49,9 +49,14 @@ export const requestTable = (page, column = '', operator = '', value = '') => {
     return async (dispatch) => {
         try {
             dispatch(setIsLoading(true));
-            let dataTable = await tableAPI.getTableAndSort(page, column, operator, value);
-            dataTable = JSON.parse(dataTable.data)
-            dispatch(setDateTable(dataTable[1], dataTable[0].count, column, operator, value));
+            if (((operator === '<' || operator === '>' || operator === '=') && column === 'name')
+            || (operator === 'like' && (column === 'distance' || column === 'amount'))) {
+                dispatch(setDateTable([], 0, column, operator, value));
+            } else {
+                let dataTable = await tableAPI.getTableAndSort(page, column, operator, value);
+                dataTable = JSON.parse(dataTable.data)
+                dispatch(setDateTable(dataTable[1], dataTable[0].count, column, operator, value));
+            }
         } catch (e) {
             console.log(e)
         } finally {
